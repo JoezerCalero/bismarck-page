@@ -1,0 +1,173 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicashop - Tu Marketplace Nicaragüense</title>
+    <meta name="description" content="Marketplace para emprendedores nicaragüenses. Vendé y comprá productos locales, hecho con amor en Nicaragua.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#0077ff">
+    <script type="importmap">
+      {
+        "imports": {
+          "swiper/element/bundle": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+        }
+      }
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Nicashop Logo" class="logo">
+            <h1>Nicashop</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="#tiendas">Tiendas</a>
+            <a href="#comunidad">Comunidad</a>
+            <a href="/mi-tienda.html" id="my-store-link">Mi Tienda</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner Principal -->
+        <section class="banner-section">
+             <swiper-container class="main-swiper" slides-per-view="1" speed="500" loop="true" autoplay-delay="3000" autoplay-stop-on-last-slide="false" navigation="true" pagination="true">
+                <swiper-slide>
+                    <div class="banner-slide" style="background-image: url('banner-1.png');">
+                        <div class="banner-text">
+                            <h2>Vendé lo que sabés hacer</h2>
+                            <p>Dale vida a tu talento y compartilo con Nicaragua.</p>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="banner-slide" style="background-image: url('banner-2.png');">
+                         <div class="banner-text">
+                            <h2>Talento 100% Nicaragüense</h2>
+                            <p>Descubrí la creatividad e innovación de nuestros emprendedores.</p>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="banner-slide" style="background-image: url('banner-3.png');">
+                         <div class="banner-text">
+                            <h2>Tu emprendimiento aquí</h2>
+                            <p>Creá tu tienda virtual en minutos. ¡Es fácil y gratis!</p>
+                        </div>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+        </section>
+
+        <!-- Buscador -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="search" placeholder="Buscar productos, tiendas, servicios...">
+                <button type="submit">Buscar</button>
+            </div>
+        </section>
+
+        <!-- Categorías Rápidas -->
+        <section class="categories-section">
+            <h2>Categorías</h2>
+            <div class="category-grid">
+                <a href="#" class="category-item">
+                    <img src="icon-ropa.png" alt="Ropa">
+                    <span>Ropa</span>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="icon-electronica.png" alt="Electrónica">
+                    <span>Electrónica</span>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="icon-comida.png" alt="Comida">
+                    <span>Comida</span>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="icon-manualidades.png" alt="Manualidades">
+                    <span>Manualidades</span>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="icon-servicios.png" alt="Servicios">
+                    <span>Servicios</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Tiendas Destacadas -->
+        <section id="tiendas" class="featured-stores-section">
+            <h2>Tiendas Destacadas</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="unan">UNAN</button>
+                <button class="filter-btn" data-filter="uca">UCA</button>
+                <button class="filter-btn" data-filter="uni">UNI</button>
+            </div>
+            <div class="stores-grid">
+                <div class="store-card" data-category="unan">
+                    <img src="tienda-1.png" alt="ArteNica">
+                    <h3>ArteNica</h3>
+                    <p>Artesanías y Souvenirs</p>
+                </div>
+                <div class="store-card" data-category="uca">
+                    <img src="tienda-2.png" alt="Byte-Shop">
+                    <h3>Byte Shop</h3>
+                    <p>Gadgets y Accesorios</p>
+                </div>
+                <div class="store-card" data-category="uni">
+                    <img src="tienda-3.png" alt="Delicias Caseras">
+                    <h3>Delicias Caseras</h3>
+                    <p>Postres y Repostería</p>
+                </div>
+                 <div class="store-card" data-category="unan">
+                    <img src="tienda-4.png" alt="EcoHogar">
+                    <h3>EcoHogar</h3>
+                    <p>Productos Sostenibles</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sugerencias personalizadas -->
+        <section class="suggestions-section">
+             <h2>Para vos</h2>
+             <div class="suggestions-container">
+                <!-- JS insertará aquí las sugerencias -->
+             </div>
+        </section>
+
+        <!-- Vista previa de comunidad -->
+        <section id="comunidad" class="community-preview-section">
+            <h2>Último en la Comunidad</h2>
+            <div class="community-topic">
+                <p><strong>Foro:</strong> ¿Cómo calcular costos para mi primer producto?</p>
+                <a href="/comunidad">Ver más</a>
+            </div>
+             <div class="community-topic">
+                <p><strong>Curso Nuevo:</strong> Introducción a las Finanzas para Emprendedores.</p>
+                <a href="#cursos" class="cta-link">Inscribirme</a>
+            </div>
+        </section>
+
+
+        <!-- Botón flotante -->
+        <a href="/crear-tienda.html" class="fab">
+            <img src="icon-publish.png" alt="Publicar mi emprendimiento">
+            <span>Publicar mi Emprendimiento</span>
+        </a>
+
+    </main>
+
+    <footer class="main-footer-bottom">
+        <div class="footer-links">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Contacto</a>
+            <a href="#">Redes Sociales</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <p class="footer-credit">Desarrollado en Nicaragua con 💙</p>
+    </footer>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>

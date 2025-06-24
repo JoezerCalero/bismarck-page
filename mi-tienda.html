@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda - Nicashop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#0077ff">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="/">
+                <img src="logo.png" alt="Nicashop Logo" class="logo">
+            </a>
+            <h1><a href="/" style="color: var(--primary-color);">Nicashop</a></h1>
+        </div>
+         <nav class="main-nav">
+            <a href="/#tiendas">Tiendas</a>
+            <a href="/#comunidad">Comunidad</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="store-dashboard">
+            <div id="store-header-container">
+                <!-- Store name will be loaded here by JS -->
+            </div>
+
+            <nav class="dashboard-nav">
+                <button class="dashboard-nav-btn active" data-tab="summary">Resumen</button>
+                <button class="dashboard-nav-btn" data-tab="products">Productos</button>
+                <button class="dashboard-nav-btn" data-tab="orders">Pedidos</button>
+                <button class="dashboard-nav-btn" data-tab="settings">Configuración</button>
+            </nav>
+
+            <!-- Tab: Resumen -->
+            <div id="summary-tab" class="dashboard-tab-content active">
+                 <h2>Resumen de la Tienda</h2>
+                 <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Ganancias Potenciales</h3>
+                        <p id="stats-profit">C$ 0.00</p>
+                        <span>(Venta - Costo) x Stock</span>
+                    </div>
+                     <div class="stat-card">
+                        <h3>Valor del Inventario</h3>
+                        <p id="stats-inventory-value">C$ 0.00</p>
+                         <span>Costo x Stock</span>
+                    </div>
+                     <div class="stat-card">
+                        <h3>Productos Activos</h3>
+                        <p id="stats-products-count">0</p>
+                         <span>Total de productos únicos</span>
+                    </div>
+                     <div class="stat-card">
+                        <h3>Ventas Realizadas</h3>
+                        <p id="stats-sales-count">0</p>
+                        <span>Total de pedidos simulados</span>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- Tab: Productos -->
+            <div id="products-tab" class="dashboard-tab-content">
+                <div class="form-container" style="margin-top: 2rem;">
+                    <h3 id="form-title">Añadir Nuevo Producto</h3>
+                    <form id="add-product-form">
+                        <input type="hidden" id="product-id">
+                        <div class="form-group">
+                            <label for="product-name">Nombre del producto</label>
+                            <input type="text" id="product-name" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="product-description">Descripción</label>
+                            <textarea id="product-description" required></textarea>
+                        </div>
+                        <div class="form-grid">
+                             <div class="form-group">
+                                <label for="product-price">Precio de Venta (C$)</label>
+                                <input type="number" id="product-price" step="0.01" required min="0">
+                            </div>
+                             <div class="form-group">
+                                <label for="product-cost">Costo de Producción (C$)</label>
+                                <input type="number" id="product-cost" step="0.01" required min="0">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="product-stock">Cantidad en Inventario</label>
+                            <input type="number" id="product-stock" step="1" required min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-image">Imagen del producto</label>
+                            <input type="file" id="product-image" accept="image/*">
+                            <img id="image-preview" src="#" alt="Vista previa del producto" />
+                        </div>
+                        <button type="submit" class="btn-submit" id="form-submit-btn">Guardar Producto</button>
+                        <button type="button" class="btn-secondary" id="form-cancel-btn" style="display: none;">Cancelar Edición</button>
+                    </form>
+                </div>
+
+                <section class="my-products-section">
+                    <h2>Mis Productos</h2>
+                    <div id="products-grid" class="products-grid">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tab: Pedidos -->
+            <div id="orders-tab" class="dashboard-tab-content">
+                <h2>Pedidos Recientes</h2>
+                <div id="orders-list-container">
+                    <p>Aquí verás tus ventas.</p>
+                    <!-- Orders will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Tab: Configuración -->
+            <div id="settings-tab" class="dashboard-tab-content">
+                <h2>Configuración de la Tienda</h2>
+                <div id="store-info-container">
+                    <!-- Store info will be loaded here -->
+                </div>
+                 <div class="settings-actions" style="margin-top: 2rem;">
+                     <button id="logout-btn" class="btn-secondary" style="border-color: #d9534f; color: #d9534f;">Cerrar Sesión y Desvincular Tienda</button>
+                 </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer-bottom">
+        <div class="footer-links">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Contacto</a>
+            <a href="#">Redes Sociales</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <p class="footer-credit">Desarrollado en Nicaragua con 💙</p>
+    </footer>
+
+    <script src="mi-tienda.js" type="module"></script>
+</body>
+</html>
